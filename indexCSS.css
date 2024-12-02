@@ -1,0 +1,63 @@
+input[type="button"]{
+    width: 30em;
+    height: 20em;
+    align-items: center;
+    margin: 0em 8em;
+    /*
+    background-image: url("logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    */
+}
+.football{
+    align-items: top;
+}
+body{
+    background-color: #333;
+}
+    
+header {
+    background-color: #333 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+}
+header p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 200%;
+}
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    color: azure;
+}
+a:link{
+    color: rgb(255, 255, 255);
+}
+li a{
+    text-decoration: none;
+}
+li {
+    padding: 10px;
+    float: right;
+    display: inline;
+}
+li a:visited{
+    color: rgb(211, 162, 28);
+}
+li:hover {
+    background-color: #111;
+}
+figcaption {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    margin: 20px;
+}
+figure{
+    text-align: center;
+}
