@@ -48,6 +48,9 @@ li a{
 li a:visited{
     color:  rgb(211, 162, 28);
 }
+li a:link{
+    color: white;
+}
 
 .menu li:hover {
     background-color: #111;
