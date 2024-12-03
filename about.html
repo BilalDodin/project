@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playbook Online</title>
     <link href="indexCSS.css" rel="stylesheet">
+    <style>
+        .first{
+            padding: 2%;
+            font-size: 200%;
+            color: rgb(255, 255, 255);
+            width: 500px;
+            border: 3px solid rgb(255, 255, 255);
+            border-radius: 5%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        span{
+            color: rgb(211, 162, 28);
+        }
+        form a{
+            text-decoration: none;
+        }
+        a:link,a:visited{
+            color: rgb(211, 162, 28);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,5 +36,27 @@
         </ul>
     </header>
     <hr>
+    <div class="first">
+    
+    <form>
+        <p>Hello! thank you for checking out our first website! We are a group of ASU students and we are: <span>Ahmad Aqel, Bilal Dodin, Yazeed Baterseh</span>. Working together to make our HTML group project. If you have any thoughts or feedback please don't be afraid to reach out to us on any one of our contacts below!</p>
+        <a href="mailto:202311049@students.asu.edu.jo"><img src="email.png" alt="instagram" width="20" >Email us!</a><br>
+        <a href="https://www.instagram.com/bilaldodin/"><img src="ig.jpg" alt="instagram" width="20" >Bilal's instagram!</a><br>
+        <a href="https://www.instagram.com/ahmad_aqel928/"><img src="ig.jpg" alt="instagram" width="20" >Ahmad's instagram!</a><br>
+        <fieldset style="border-radius: 5%;">
+        <legend>Feedback:</legend>
+        Enter your full name:<br>
+        <input type="text" placeholder="Full Name "><br>
+              Enter your phone number:<br>
+        <input type="text" placeholder="Phone Number"><br>
+              Enter your Email:<br>
+        <input type="email" placeholder="Email Address"><br>
+              Send us a message:<br>
+        <input type="text" placeholder="Message" style="height: 200px; width: 400px;"><br>
+              
+        <button type="submit">Send</button>
+    </fieldset>
+    </form>
+    </div>
 </body>
 </html>

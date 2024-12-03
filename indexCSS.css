@@ -1,63 +1,58 @@
-input[type="button"]{
+.football, .basketball, .volleyball{
+    display:inline-block;
     width: 30em;
     height: 20em;
-    align-items: center;
-    margin: 0em 8em;
-    /*
-    background-image: url("logo.png");
+    border: 1px solid rgb(211, 162, 28);
     background-position: center;
-    background-size: contain;
+    background-size:auto;
     background-repeat: no-repeat;
-    */
+    text-decoration: none;
 }
-.football{
-    align-items: top;
+a.football{
+    background-image: url("footballcourt.jpg");
 }
+a.basketball{
+    background-image: url("basketball-court.png");
+}
+a.volleyball{
+    background-image: url("3d-volleyball-court.png");
+}
+
 body{
     background-color: #333;
 }
-    
+.figs{
+    text-align: center;
+}
 header {
     background-color: #333 ;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: larger;
 }
-header p{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 200%;
-}
-ul {
-    list-style-type: none;
-    overflow: hidden;
-    color: azure;
-}
-a:link{
-    color: rgb(255, 255, 255);
-}
+
 li a{
     text-decoration: none;
 }
+
 li {
     padding: 10px;
     float: right;
     display: inline;
 }
+
 li a:visited{
-    color: rgb(211, 162, 28);
+    color:  rgb(211, 162, 28);
 }
+
 li:hover {
     background-color: #111;
 }
-figcaption {
-    font-size: 2em;
-    font-weight: bold;
-    color: white;
-    margin: 20px;
-}
-figure{
-    text-align: center;
+.fcap{
+    border-left: solid 6px rgb(211, 162, 28);
+    background-color: white;
+    width: 30em;
+    color: rgb(0, 0, 0);
 }
