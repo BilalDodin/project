@@ -61,3 +61,10 @@ li a:link{
     width: 30em;
     color: rgb(0, 0, 0);
 }
+video {
+    display: block;
+    margin: auto;
+}
+span{
+    color: rgb(211, 162, 28);
+}
