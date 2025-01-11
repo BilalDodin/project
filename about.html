@@ -4,46 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playbook Online</title>
-    <link href="indexCSS.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="indexCSS.css" rel="stylesheet">
     <style>
-        div{
-            padding: 2%;
-            font-size: 200%;
+        .abt {
+            padding: 2rem;
+            font-size: 1.25rem;
             color: rgb(255, 255, 255);
             border: 3px solid rgb(255, 255, 255);
-            border-radius: 5%;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-radius: 10px;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            background-color:#111;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Logo" height=50px>
-        <ul class="menu">
-            <li><a href="index.html" >Home</a></li>
-            <li><a href="sources.html">Sources</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="story.html">Story</a></li>
-        </ul>
-    </header>
-    <hr>
-    <div>
-    <p>Welcome to <span>Playbook Online</span>, your go-to destination for learning the basics of football, volleyball, and basketball! Whether you’re a beginner taking your first steps into sports or someone looking to brush up on the fundamentals, we’re here to help you get started.
+    <nav class="navbar navbar-expand-lg bg-body-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Bootstrap"height="24"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sources.html">Sources</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="story.html">Story</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-        Our mission is to make sports education simple, accessible, and fun for everyone. We believe that understanding the basics is the key to enjoying and excelling in any game. That’s why we’ve created a space where anyone—regardless of age, experience, or background—can explore the rules, techniques, and tips for three of the world’s most loved sports.
-        
-        Here’s what you’ll find on our website:
-        <ul>
-            <li>Clear and Easy-to-Follow Guides: Step-by-step instructions to help you understand the essentials of each sport.</li>
-        <br>
-            <li>Tips and Tricks: Pro tips to help you improve your skills and confidence on the field or court.</li>
-<br>
-            <li>Fun and Inclusive Content: Designed for individuals, families, and communities looking to stay active and have fun.</li>
-        </ul>
-        At <span>Playbook Online</span>, we’re passionate about promoting an active and healthy lifestyle. We believe that sports have the power to bring people together, build confidence, and inspire personal growth.
-        
-        Join us on this exciting journey, and let’s get moving together!</p>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="abt">
+                    <p>
+                        Welcome to <span id="gold">Playbook Online</span>, your go-to destination for learning the basics of football, volleyball, and basketball! Whether you’re a beginner taking your first steps into sports or someone looking to brush up on the fundamentals, we’re here to help you get started.
+                    </p>
+                    <p>
+                        Our mission is to make sports education simple, accessible, and fun for everyone. We believe that understanding the basics is the key to enjoying and excelling in any game. That’s why we’ve created a space where anyone—regardless of age, experience, or background—can explore the rules, techniques, and tips for three of the world’s most loved sports.
+                    </p>
+                    <p>Here’s what you’ll find on our website:</p>
+                    <ul>
+                        <li>Clear and Easy-to-Follow Guides: Step-by-step instructions to help you understand the essentials of each sport.</li>
+                        <li>Tips and Tricks: Pro tips to help you improve your skills and confidence on the field or court.</li>
+                        <li>Fun and Inclusive Content: Designed for individuals, families, and communities looking to stay active and have fun.</li>
+                    </ul>
+                    <p>
+                        At <span id="gold">Playbook Online</span>, we’re passionate about promoting an active and healthy lifestyle. We believe that sports have the power to bring people together, build confidence, and inspire personal growth.
+                    </p>
+                    <p>Join us on this exciting journey, and let’s get moving together!</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 </html>

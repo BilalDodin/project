@@ -1,37 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playbook Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="indexCSS.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
+    <!-- <header>
         <img src="logo.png" alt="Logo" height=50px>
         <ul class="menu">
-            <li><a href="index.html" >Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="sources.html">Sources</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="story.html">Story</a></li>
         </ul>
-    </header>
+    </header> 
     <hr>
-    <div class="figs">
-    <h1 style="color: white;">Click on one of the boxes to learn the rules and fundamentals for one of these sports!</h1>
-    <figure class = "football">
-        <a class="football" href="football.html"><p style="font-size: 300%; color: white; text-align: center;">Football</p></a>
-        <figcaption class="fcap"><p>Football is a globally loved sport where two teams of 11 players compete to score goals by moving a ball into the opponent's net. Celebrated for its simplicity, strategy, and excitement, it's the most popular sport in the world.</p></figcaption>
-    </figure>
-    <figure class = "basketball">
-        <a class="basketball" href="basketball.html"><p style="font-size: 300%; color: white; text-align: center;">Basketball</p></a>
-        <figcaption class="fcap"><p>Basketball is a dynamic sport played between two teams of five players each, aiming to score points by shooting a ball through the opposing team's hoop. Known for its speed, strategy, and teamwork, it combines athleticism with precision to create an exciting and widely popular game.</p></figcaption>
-    </figure>
-    <figure class = "volleyball">
-        <a class="volleyball" href="volleyball.html"><p style="font-size: 300%; color: white; text-align: center;">Volleyball</p></a>
-        <figcaption class="fcap"><p>Volleyball is a fast-paced sport played between two teams of six players, aiming to score points by hitting a ball over a net and into the opposing team's court. Known for its energy, teamwork, and skill, it's enjoyed both recreationally and competitively worldwide.</p></figcaption>
-    </figure>
-</div>
+    -->
+    <nav class="navbar navbar-expand-lg bg-body-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Bootstrap"height="24"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sources.html">Sources</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="story.html">Story</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container text-center my-5">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div id="crd" class="card h-100 shadow"  data-bs-theme="dark">
+              <img src="footballcourt.jpg" class="card-img-top" alt="Football Court" style="height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title fw-bold fs-4">Football</h5>
+                <p class="card-text fs-6">Football is a globally loved sport where two teams of 11 players compete to score
+                  goals by moving a ball into the opponent's net. Celebrated for its simplicity, strategy, and excitement, it's the most
+                  popular sport in the world.</p>
+                <a href="football.html" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div id="crd" class="card h-100 shadow" data-bs-theme="dark">
+              <img src="basketball-court.png" class="card-img-top" alt="Basketball Court" style="height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title fw-bold fs-4">Basketball</h5>
+                <p class="card-text fs-6">Basketball is a dynamic sport played between two teams of five players each, aiming
+                  to score points by shooting a ball through the opposing team's hoop. Known for its speed, strategy, and
+                  teamwork, it combines athleticism with precision to create an exciting and widely popular game.</p>
+                <a href="basketball.html" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div id="crd" class="card h-100 shadow" data-bs-theme="dark">
+              <img src="3d-volleyball-court.png" class="card-img-top" alt="Volleyball Court" style="height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title fw-bold fs-4">Volleyball</h5>
+                <p class="card-text fs-6">Volleyball is a fast-paced sport played between two teams of six players, aiming to
+                  score points by hitting a ball over a net and into the opposing team's court. Known for its energy, teamwork,
+                  and skill, it's enjoyed both recreationally and competitively worldwide.</p>
+                <a href="volleyball.html" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- <div class="figs">
+        <h1 style="color: white;">Click on one of the boxes to learn the rules and fundamentals for one of these sports!
+        </h1>
+        <figure class="football">
+            <a class="football" href="football.html">
+                <p style="font-size: 300%; color: white; text-align: center;">Football</p>
+            </a>
+            <figcaption class="fcap">
+                <p>Football is a globally loved sport where two teams of 11 players compete to score goals by moving a
+                    ball into the opponent's net. Celebrated for its simplicity, strategy, and excitement, it's the most
+                    popular sport in the world.</p>
+            </figcaption>
+        </figure>
+        <figure class="basketball">
+            <a class="basketball" href="basketball.html">
+                <p style="font-size: 300%; color: white; text-align: center;">Basketball</p>
+            </a>
+            <figcaption class="fcap">
+                <p>Basketball is a dynamic sport played between two teams of five players each, aiming to score points
+                    by shooting a ball through the opposing team's hoop. Known for its speed, strategy, and teamwork, it
+                    combines athleticism with precision to create an exciting and widely popular game.</p>
+            </figcaption>
+        </figure>
+        <figure class="volleyball">
+            <a class="volleyball" href="volleyball.html">
+                <p style="font-size: 300%; color: white; text-align: center;">Volleyball</p>
+            </a>
+            <figcaption class="fcap">
+                <p>Volleyball is a fast-paced sport played between two teams of six players, aiming to score points by
+                    hitting a ball over a net and into the opposing team's court. Known for its energy, teamwork, and
+                    skill, it's enjoyed both recreationally and competitively worldwide.</p>
+            </figcaption>
+        </figure>
+    </div> -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

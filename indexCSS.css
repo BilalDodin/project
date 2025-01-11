@@ -1,3 +1,14 @@
+
+
+body{
+    background-color: #333;
+    font-family: 'Trebuchet MS', Arial, sans-serif
+}
+
+.fb{
+    color: rgb(211, 162, 28);
+}
+
 .football, .basketball, .volleyball{
     display:inline-block;
     width: 30em;
@@ -8,24 +19,11 @@
     background-repeat: no-repeat;
     text-decoration: none;
 }
-a.football{
-    background-image: url("footballcourt.jpg");
-}
-a.basketball{
-    background-image: url("basketball-court.png");
-}
-a.volleyball{
-    background-image: url("3d-volleyball-court.png");
-}
-.fb{
-    color: rgb(211, 162, 28);
-}
-body{
-    background-color: #333;
-}
+/*
 .figs{
     text-align: center;
 }
+
 header {
     background-color: #333 ;
     display: flex;
@@ -34,10 +32,10 @@ header {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: larger;
 }
-
+ 
 li a{
     text-decoration: none;
-}
+} 
 
 .menu li{
     padding: 10px;
@@ -55,16 +53,21 @@ li a:link{
 .menu li:hover {
     background-color: #111;
 }
+    
 .fcap{
     border-left: solid 6px rgb(211, 162, 28);
     background-color: white;
     width: 30em;
     color: rgb(0, 0, 0);
 }
+    */
 video {
     display: block;
     margin: auto;
 }
-span{
+#gold{
     color: rgb(211, 162, 28);
+}
+#crd{
+    background-color: #111;
 }
