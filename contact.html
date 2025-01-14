@@ -35,25 +35,22 @@
             font-weight: bold;
         }
 
-        input,
-        textarea,
+        #phone,
+        #email,
+        #name,
+        #age,
         #sports,
-        #gender {
+        #gender,
+        #message {
             width: 100%;
             border: 1px solid white;
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: #333;
             color: white;
             border-radius: 5px;
             padding: 0.5em;
             margin-bottom: 1em;
         }
-
-        .radio-group,
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1em;
-        }
+        
         button {
             background-color: rgb(211, 162, 28);
             color: white;
@@ -134,31 +131,43 @@
                             
 
                             <label for="name">Enter your full name:</label><span id="Ename" style="color: red;"></span>
-                            <input type="text" id="name" placeholder="Full Name">
+                            <input type="text" id="name" placeholder="Full Name" class="form-control">
                             <label for="phone">Enter your phone number:</label><span id="Ephone" style="color: red;"></span>
-                            <input type="text" id="phone" placeholder="Phone Number">
+                            <input type="text" id="phone" placeholder="Phone Number" class="form-control">
                             <label for="email">Enter your Email:</label><span id="Eemail" style="color: red;"></span>
-                            <input type="email" id="email" placeholder="Email Address">
+                            <input type="email" id="email" placeholder="Email Address" class="form-control">
                             <label for="age">Enter your age:</label><span id="Eage" style="color: red;"></span>
-                            <input type="number" id="age" placeholder="Age">
+                            <input type="number" id="age" placeholder="Age" class="form-control">
                             <label for="gender">Select your gender:</label><span id="Egender" style="color: red;"></span>
-                            <div class="radio-group" id="gender">
+                            <div id="gender">
+                                <div>
                                 <input type="radio" name="gender" id="male" value="Male">
                                 <label for="male">Male</label>
+                                </div>
+                                <div>
                                 <input type="radio" name="gender" id="female" value="Female">
                                 <label for="female">Female</label>
+                                </div>
                             </div>
                             <label for="sports">Select the sports you read about:</label><span id="Esports" style="color: red;"></span>
-                            <div class="checkbox-group" id="sports">
+                            <div id="sports">
+                                <div>
                                 <input type="checkbox" value="Football" id="football" name="sports">
                                 <label for="male">Football</label>
+                                </div>
+                                <div>
                                 <input type="checkbox" value="Basketball" id="basketball" name="sports">
                                 <label for="male">Basketball</label>
-                                <input type="checkbox" value="Volleyball" id="volleyball" name="sports">
+                                </div>
+                                <div>
+                                <input type="checkbox" value="Volleyball" id="volleyball" name="sports" >
                                 <label for="male">Volleyball</label>
+                                </div>
                             </div>
                             <label for="message">Send us a message:</label><span id="Emessage" style="color: red;"></span>
-                            <textarea id="message" placeholder="Message" rows="5"></textarea>
+                            <div>
+                            <textarea id="message" placeholder="Message" rows="5" class="form-control"></textarea>
+                            </div>
                             <button type="button" onclick="validate()">Send</button>
                         </fieldset>
                     </form>
