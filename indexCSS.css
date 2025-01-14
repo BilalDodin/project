@@ -4,70 +4,52 @@ body{
     background-color: #333;
     font-family: 'Trebuchet MS', Arial, sans-serif
 }
-
-.fb{
-    color: rgb(211, 162, 28);
-}
-
-.football, .basketball, .volleyball{
-    display:inline-block;
-    width: 30em;
-    height: 20em;
-    border: 1px solid rgb(211, 162, 28);
-    background-position: center;
-    background-size:auto;
-    background-repeat: no-repeat;
-    text-decoration: none;
-}
-/*
-.figs{
-    text-align: center;
-}
-
-header {
-    background-color: #333 ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: larger;
-}
- 
-li a{
-    text-decoration: none;
-} 
-
-.menu li{
-    padding: 10px;
-    float: right;
-    display: inline;
-}
-
-li a:visited{
-    color:  rgb(211, 162, 28);
-}
-li a:link{
-    color: white;
-}
-
-.menu li:hover {
-    background-color: #111;
-}
-    
-.fcap{
-    border-left: solid 6px rgb(211, 162, 28);
-    background-color: white;
-    width: 30em;
-    color: rgb(0, 0, 0);
-}
-    */
 video {
     display: block;
-    margin: auto;
+    margin: 2rem auto;
+    max-width: 100%;
+    border-radius: 10px;
 }
 #gold{
     color: rgb(211, 162, 28);
 }
 #crd{
     background-color: #111;
+}
+ul, ol {
+    margin-top: 1rem;
+}
+
+ul li, ol li {
+    margin-bottom: 1rem;
+}
+
+.content-section {
+    background-color: #111;
+    color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.pdf-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.pdf-container figcaption {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    max-width: 300px;
+}
+
+.pdf-container object {
+    border: 2px solid white;
+    border-radius: 10px;
+    flex: 1;
 }

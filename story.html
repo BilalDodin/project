@@ -1,59 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook Online</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="indexCSS.css" rel="stylesheet">
-    <style>
-    fieldset{
-        display: flex;
-        font-size: 200%;
-        color: rgb(255, 255, 255);
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        background-color: #111;
-    }
 
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="indexCSS.css" rel="stylesheet">
+  <style>
+    fieldset {
+      border: 3px solid white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      background-color: #111;
+      color: white;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Bootstrap"height="24"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sources.html">Sources</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="story.html">Story</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    <fieldset style="border: 3px white solid; border-radius: 5%; padding: 10px;">
-        <legend>Amro Alsheikh:</legend>
-        <a href="https://www.instagram.com/amroalsheikh1/"><img src="amro.jpg" alt="Amro" height=250px style="border: 3px white solid;"></a>
-        <p style="margin: 50px; ">"I have never played volleyball and dont know the rules of it, and when I came upon this site, it helped me learn the basics of volleyball in a very short time. This enabled me to have fun with my friends and not sit alone at lunchtime where Omar would approach me and spill the choco milk on me, then my mom has to come from home to bring me a clean pair of pants. THANK YOU <span id="gold">PLAYBOOK ONLINE.</span>"</p>
+  <nav class="navbar navbar-expand-lg bg-body-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Bootstrap" height="24"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sources.html">Sources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="story.html">Story</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10 col-sm-12">
+        <h3 id="gold">Amro Alsheikh:</h3>
+        <fieldset>
+          <a href="https://www.instagram.com/amroalsheikh1/">
+            <img src="amro.jpg" alt="Amro" style="border: 3px solid white;
+                        border-radius: 10px;
+                        max-height: 250px;">
+          </a>
+          <p>
+            "I have never played volleyball and don't know the rules of it. When I came upon this site, it
+            helped me learn the basics of volleyball in a very short time. This enabled me to have fun with
+            my friends and not sit alone at lunchtime where Omar would approach me and spill the choco milk
+            on me, then my mom had to come from home to bring me a clean pair of pants. THANK YOU
+            <span id="gold">PLAYBOOK ONLINE.</span>"
+          </p>
         </fieldset>
-    <p style="color: white; font-size: x-large;">More stories to be added....</p>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        <p class="footer-text text-center mt-4" id="gold">More stories to be added...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 </body>
+
 </html>
