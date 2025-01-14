@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="indexCSS.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Bootstrap" height="24"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sources.html">Sources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="story.html">Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="calculate.html">Calculate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-12">
+                <div id="first">
+                    <form>
+                        <div class="mb-3">
+                            <label for="height" class="form-label">Height (in meters):</label><span id="Eheight"
+                                style="color: red;"></span>
+                            <input type="number" id="height" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="weight" class="form-label">Weight (in kilograms):</label><span id="Eweight"
+                                style="color: red;"></span>
+                            <input type="number" id="weight" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Gender:</label><span id="Egender" style="color: red;"></span>
+                            <div>
+                                <input type="radio" id="male" name="gender" value="Male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Lifestyle:</label><span id="Elifestyle"
+                                style="color: red;"></span>
+                            <div>
+                                <input type="radio" id="active" name="lifestyle" value="Active">
+                                <label for="active">Active</label>
+
+                                <div>
+                                    <input type="radio" id="sedentary" name="lifestyle" value="Sedentary">
+                                    <label for="sedentary">Sedentary</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="button" onclick="BMI()" value="Calculate BMI" class="btn btn-light">
+                            </div>
+
+                            <div class="mb-3">
+                                <span id="feedback1"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <textarea id="feedback2" class="form-control" rows="6"></textarea>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function BMI() {
+
+            height = document.getElementById("height").value;
+
+            weight = document.getElementById("weight").value;
+
+            var genderList = document.getElementsByName("gender");
+            var noGender = false;
+
+            for (i = 0; i < genderList.length; i++) {
+                if (genderList[i].checked) {
+                    noGender = true;
+                    gender = genderList[i].value;
+                }
+            }
+
+            var lifestyleList = document.getElementsByName("lifestyle");
+            var noLifestyle = false;
+
+            for (i = 0; i < lifestyleList.length; i++) {
+                if (lifestyleList[i].checked) {
+                    noLifestyle = true;
+                    lifestyle = lifestyleList[i].value;
+                }
+            }
+
+            if (height <= 0 || height == null || height == "") {
+                document.getElementById("Eheight").innerHTML = (" Please enter a valid height");
+            }
+            else if (weight <= 0 || weight == null || weight == "") {
+                document.getElementById("Eheight").innerHTML = ("");
+                document.getElementById("Eweight").innerHTML = (" Please enter a valid weight");
+            }
+            else if (noGender == false) {
+                document.getElementById("Eweight").innerHTML = ("");
+                document.getElementById("Egender").innerHTML = (" Please choose a gender");
+            }
+            else if (noLifestyle == false) {
+                document.getElementById("Egender").innerHTML = ("");
+                document.getElementById("Elifestyle").innerHTML = (" Please choose a lifestyle");
+            }
+            else {
+                document.getElementById("Elifestyle").innerHTML = ("");
+                var bmi = (weight / (height * height));
+                if (bmi < 18.5) {
+                    status = "Underweight";
+                } else if (bmi >= 18.5 && bmi < 25) {
+                    status = "Normal";
+                } else if (bmi >= 25 && bmi < 30) {
+                    status = "Overweight";
+                } else {
+                    status = "Obese";
+                }
+
+                document.getElementById("feedback1").innerHTML = ("Your bmi  is: " + bmi + ", indicating that you are: " + status);
+
+                document.getElementById("feedback2").innerHTML = ("Height  is: " + height + "m" + "\nWeight is: " + weight + "kg" + "\nGender: " + gender + "\nLifestyle: " + lifestyle + "\nBMI: " + bmi + "\nStatus: " + status);
+
+            }
+        }
+    </script>
+</body>
+
+</html>

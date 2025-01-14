@@ -7,17 +7,8 @@
     <title>Playbook Online</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link href="indexCSS.css" rel="stylesheet">
+    <link href="indexCSS.css" rel="stylesheet">
     <style>
-        #first {
-            padding: 2rem;
-            font-size: 1.25rem;
-            color: white;
-            border: 3px solid white;
-            border-radius: 10px;
-            font-family: 'Trebuchet MS', Arial, sans-serif;
-            background-color: #111;
-        }
 
         #contact a {
             text-decoration: none;
@@ -45,7 +36,9 @@
         }
 
         input,
-        textarea {
+        textarea,
+        #sports,
+        #gender {
             width: 100%;
             border: 1px solid white;
             background-color: rgba(255, 255, 255, 0.2);
@@ -54,7 +47,13 @@
             padding: 0.5em;
             margin-bottom: 1em;
         }
-        
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+        }
         button {
             background-color: rgb(211, 162, 28);
             color: white;
@@ -70,45 +69,53 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar navbar-expand-lg bg-body-dark" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Bootstrap"height="24"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sources.html">Sources</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page"  href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="story.html">Story</a>
-              </li>
-            </ul>
-          </div>
+            <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Bootstrap" height="24"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sources.html">Sources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="story.html">Story</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="calculate.html">Calculate</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 
-   
+
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10 col-sm-12">
                 <div id="first">
                     <form id="contact">
+                        
+                        <p id="date" style="color: rgb(211, 162, 28);"></p>
+                        
                         <p>
                             Hello! Thank you for checking out our first website! We are a group of ASU students and we
                             are:
-                            <span id="gold">Ahmad Aqel</span> and <span id="gold">Bilal Dodin</span>. Working together to make our HTML group
+                            <span id="gold">Ahmad Aqel</span> and <span id="gold">Bilal Dodin</span>. Working together
+                            to make our HTML group
                             project. If you have any thoughts or feedback, please don't be afraid to reach out to us
                             from one of the options below!
                         </p>
@@ -123,15 +130,36 @@
                         </a><br>
                         <fieldset>
                             <legend>Feedback:</legend>
-                            <label for="name">Enter your full name:</label>
+                            
+                            
+
+                            <label for="name">Enter your full name:</label><span id="Ename" style="color: red;"></span>
                             <input type="text" id="name" placeholder="Full Name">
-                            <label for="phone">Enter your phone number:</label>
+                            <label for="phone">Enter your phone number:</label><span id="Ephone" style="color: red;"></span>
                             <input type="text" id="phone" placeholder="Phone Number">
-                            <label for="email">Enter your Email:</label>
+                            <label for="email">Enter your Email:</label><span id="Eemail" style="color: red;"></span>
                             <input type="email" id="email" placeholder="Email Address">
-                            <label for="message">Send us a message:</label>
+                            <label for="age">Enter your age:</label><span id="Eage" style="color: red;"></span>
+                            <input type="number" id="age" placeholder="Age">
+                            <label for="gender">Select your gender:</label><span id="Egender" style="color: red;"></span>
+                            <div class="radio-group" id="gender">
+                                <input type="radio" name="gender" id="male" value="Male">
+                                <label for="male">Male</label>
+                                <input type="radio" name="gender" id="female" value="Female">
+                                <label for="female">Female</label>
+                            </div>
+                            <label for="sports">Select the sports you read about:</label><span id="Esports" style="color: red;"></span>
+                            <div class="checkbox-group" id="sports">
+                                <input type="checkbox" value="Football" id="football" name="sports">
+                                <label for="male">Football</label>
+                                <input type="checkbox" value="Basketball" id="basketball" name="sports">
+                                <label for="male">Basketball</label>
+                                <input type="checkbox" value="Volleyball" id="volleyball" name="sports">
+                                <label for="male">Volleyball</label>
+                            </div>
+                            <label for="message">Send us a message:</label><span id="Emessage" style="color: red;"></span>
                             <textarea id="message" placeholder="Message" rows="5"></textarea>
-                            <button type="submit">Send</button>
+                            <button type="button" onclick="validate()">Send</button>
                         </fieldset>
                     </form>
                 </div>
@@ -142,6 +170,98 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+        
+        <script>
+            function setDate(){
+                document.getElementById("date").innerHTML=new Date();
+            }
+
+           setInterval(setDate,1000);
+
+            function validate(){
+
+                if( document.getElementById("name").value == "" || document.getElementById("name").value == null ){
+                    document.getElementById("Ename").innerHTML=(" Please Enter a valid name");
+                    document.getElementById("name").style.border="1px solid red";
+                }
+                else{
+                    document.getElementById("Ename").innerHTML=("");
+                    document.getElementById("name").style.border="1px solid green";
+                }
+
+                if( document.getElementById("phone").value == "" || document.getElementById("phone").value == null || document.getElementById("phone").value < 0 || document.getElementById("phone").value.length != 10){
+                    document.getElementById("Ephone").innerHTML=(" Please Enter a valid number");
+                    document.getElementById("phone").style.border="1px solid red";
+                }
+                else{
+                    document.getElementById("Ephone").innerHTML=("");
+                    document.getElementById("phone").style.border="1px solid green";
+                }
+
+                if( document.getElementById("email").value == "" || document.getElementById("email").value == null || !document.getElementById("email").value.includes('@')){
+                    document.getElementById("Eemail").innerHTML=(" Please Enter a valid Email");
+                    document.getElementById("email").style.border="1px solid red"; 
+                }
+                else{
+                    document.getElementById("Eemail").innerHTML=("");
+                    document.getElementById("email").style.border="1px solid green"; 
+                }
+
+                if( document.getElementById("age").value == "" || document.getElementById("age").value == null || document.getElementById("age").value < 0){
+                    document.getElementById("Eage").innerHTML=(" Please Enter a valid age");
+                    document.getElementById("age").style.border="1px solid red";
+                }
+                else{
+                    document.getElementById("Eage").innerHTML=("");
+                    document.getElementById("age").style.border="1px solid green";
+                }
+
+                var genderList = document.getElementsByName("gender");
+                var noGender = false;
+
+                for(i = 0; i <genderList.length;i++){
+                    if(genderList[i].checked){
+                        noGender = true;
+                    }
+                }
+
+                if( noGender == false){
+                    document.getElementById("Egender").innerHTML=(" Please choose a gender");
+                    document.getElementById("gender").style.border="1px solid red";
+                }
+                else{
+                    document.getElementById("Egender").innerHTML=("");
+                    document.getElementById("gender").style.border="1px solid green";
+                }
+
+                var sportsList = document.getElementsByName("sports");
+                var noSport = false;
+
+                for(i = 0; i <sportsList.length;i++){
+                    if(sportsList[i].checked){
+                        noSport = true;
+                    }
+                }
+
+                if( noSport == false){
+                    document.getElementById("Esports").innerHTML=(" Please choose a sport");
+                    document.getElementById("sports").style.border="1px solid red";
+                }
+                else{
+                    document.getElementById("Esports").innerHTML=("");
+                    document.getElementById("sports").style.border="1px solid green";
+                }
+
+                if( document.getElementById("message").value == "" || document.getElementById("message").value == null ){
+                    document.getElementById("Emessage").innerHTML=(" Please Enter a valid message");
+                    document.getElementById("message").style.border="1px solid red";
+                }
+                else{
+                    document.getElementById("Emessage").innerHTML=("");
+                    document.getElementById("message").style.border="1px solid green";
+                }
+            }
+        </script>
 </body>
 
 </html>

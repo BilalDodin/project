@@ -53,3 +53,13 @@ ul li, ol li {
     border-radius: 10px;
     flex: 1;
 }
+
+#first {
+    padding: 2rem;
+    font-size: 1.25rem;
+    color: white;
+    border: 3px solid white;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background-color: #111;
+}
